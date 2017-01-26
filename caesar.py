@@ -15,7 +15,7 @@ def rotate_character(char, rot):
         if i.isalpha():
             if i.isupper():
                 newPos = rot + ord(char)
-                if newPos in range(65,90):
+                if newPos in range(65,91):
                     return chr(newPos)
                 else:
                     fixPos = newPos - 26
@@ -25,7 +25,7 @@ def rotate_character(char, rot):
                 newPos = rot + ord(char)
             if newPos in range(65,90):
                 return chr(newPos)
-            elif newPos in range(97,122):
+            elif newPos in range(97,123):
                 return chr(newPos)
             else:
                 fixPos = newPos - 26
@@ -35,8 +35,6 @@ def rotate_character(char, rot):
             return char
 
 def encrypt(text, rot):
-
-        
         text = str(text)
         newTExt = ""
         for char in text:
